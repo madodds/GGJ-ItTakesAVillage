@@ -1,18 +1,21 @@
 # Define the imports
 import twitch
 import keypresser
+import sys
 t = twitch.Twitch();
 k = keypresser.Keypresser();
+
 lineCount = 0;
-fileName = "textlog.txt"
-textLog = open(fileName, "w")
-textLog.write("");
-textLog.close()
+#fileName = "textlog.txt"
+#textLog = open(fileName, "w")
+#textLog.write("");
+#textLog.close()
 
 # Enter your twitch username and oauth-key below, and the app connects to twitch with the details.
 # Your oauth-key can be generated at http://twitchapps.com/tmi/
-username = "toomaja";
-key = "oauth:e49f6nv11p29gisbqpv7aosi1vwpn0";
+# This information is currently getting pulled from the command line arguments.
+username = sys.argv[1];
+key = sys.argv[2];
 t.twitch_connect(username, key);
 
 def SendAction(keypress, uName, action, lc):
@@ -22,9 +25,9 @@ def SendAction(keypress, uName, action, lc):
     # Post the action to the console and log.
     logMessage = str(lc) + ": " + username + ": " + msg
     print(logMessage)
-    textLog = open(fileName, "a")
-    textLog.write(logMessage + "\n")
-    textLog.close()
+    #textLog = open(fileName, "a")
+    #textLog.write(logMessage + "\n")
+    #textLog.close()
 
 # The main loop
 while True:
@@ -46,7 +49,7 @@ while True:
             if msg == "pet": SendAction("p", username, msg, lineCount);
             elif msg == "feed": SendAction("f", username, msg, lineCount);
             elif msg == "dance": SendAction("d", username, msg, lineCount);
-            else: 
+            else:
                 lineCount -= 1
-                print(username + ": " + msg);
+                #print(username + ": " + msg);
             
