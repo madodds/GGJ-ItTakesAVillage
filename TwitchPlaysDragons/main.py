@@ -14,7 +14,7 @@ lineCount = 0;
 # Enter your twitch username and oauth-key below, and the app connects to twitch with the details.
 # Your oauth-key can be generated at http://twitchapps.com/tmi/
 # This information is currently getting pulled from the command line arguments.
-username = sys.argv[1];
+username = sys.argv[1].lower();
 key = sys.argv[2];
 t.twitch_connect(username, key);
 
