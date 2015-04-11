@@ -1,6 +1,6 @@
 # GGJ-ItTakesAVillage
 ![It Takes a Village: screenshot from streaming the game.](https://raw.githubusercontent.com/madodds/GGJ-ItTakesAVillage/master/GGJ%20TPD%20picture.JPG)
-Repository the for Global Game Jam 2015 game made in a group of 3, called "It takes a Village".  Twitch chat interaction and the Unity source is contained within. The Twitch chat code is contained in the "Twitch Plays Dragons" folder. The "Old Code" folder contains code that the other developer wrote before I had refactored it.
+Repository the for Global Game Jam 2015 game made in a group of 3, called "It takes a Village".  Twitch chat interaction and the Unity source is contained within. The Twitch chat code is contained in the "Twitch Plays Dragons" folder.
 
 Most of the code for the Twitch chat came from the tutorial http://www.wituz.com/tutorial-make-your-own-twitch-plays-stream.html
 After the event, I refactored, cleaned, and debugged the game to make it presentable.
